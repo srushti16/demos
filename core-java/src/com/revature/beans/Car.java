@@ -1,6 +1,10 @@
 package com.revature.beans;
 
 public class Car implements Comparable<Car> {
+	
+	public static void main(String[] args) {
+		System.out.println("interface".substring(2, 4));
+	}
 
 	public static int i = 5;
 
