@@ -1,0 +1,51 @@
+2018-02-02 14:02:32 INFO  Launcher:9 - test
+2018-02-02 15:10:02 INFO  MultiplierTest:24 - Initialization before any tests are run
+2018-02-02 15:10:02 INFO  MultiplierTest:29 - setting up the list before each test
+2018-02-02 15:10:02 INFO  MultiplierTest:46 - runs after each test
+2018-02-02 15:10:02 INFO  MultiplierTest:51 - runs after all tests are complete
+2018-02-02 15:11:04 INFO  MultiplierTest:24 - Initialization before any tests are run
+2018-02-02 15:11:04 INFO  MultiplierTest:29 - setting up the list before each test
+2018-02-02 15:11:04 INFO  MultiplierTest:46 - runs after each test
+2018-02-02 15:11:04 INFO  MultiplierTest:51 - runs after all tests are complete
+2018-02-02 15:16:03 INFO  MultiplierTest:25 - Initialization before any tests are run
+2018-02-02 15:16:03 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:16:03 INFO  MultiplierTest:59 - runs after each test
+2018-02-02 15:16:03 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:16:03 INFO  MultiplierTest:59 - runs after each test
+2018-02-02 15:16:03 INFO  MultiplierTest:64 - runs after all tests are complete
+2018-02-02 15:17:20 INFO  MultiplierTest:25 - Initialization before any tests are run
+2018-02-02 15:17:20 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:17:20 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:17:20 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:17:20 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:17:20 INFO  MultiplierTest:65 - runs after all tests are complete
+2018-02-02 15:19:30 INFO  MultiplierTest:25 - Initialization before any tests are run
+2018-02-02 15:19:30 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:19:30 INFO  MultiplierTest:59 - runs after each test
+2018-02-02 15:19:30 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:19:30 INFO  MultiplierTest:59 - runs after each test
+2018-02-02 15:19:30 INFO  MultiplierTest:64 - runs after all tests are complete
+2018-02-02 15:20:15 INFO  MultiplierTest:25 - Initialization before any tests are run
+2018-02-02 15:20:15 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:20:15 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:20:15 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:20:15 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:20:15 INFO  MultiplierTest:65 - runs after all tests are complete
+2018-02-02 15:22:05 INFO  MultiplierTest:25 - Initialization before any tests are run
+2018-02-02 15:22:05 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:22:05 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:22:05 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:22:05 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:22:05 INFO  MultiplierTest:65 - runs after all tests are complete
+2018-02-02 15:35:07 INFO  MultiplierTest:25 - Initialization before any tests are run
+2018-02-02 15:35:07 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:35:07 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:35:07 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:35:07 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:35:07 INFO  MultiplierTest:65 - runs after all tests are complete
+2018-02-02 15:37:26 INFO  MultiplierTest:25 - Initialization before any tests are run
+2018-02-02 15:37:26 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:37:26 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:37:26 INFO  MultiplierTest:30 - setting up the list before each test
+2018-02-02 15:37:26 INFO  MultiplierTest:60 - runs after each test
+2018-02-02 15:37:26 INFO  MultiplierTest:65 - runs after all tests are complete
