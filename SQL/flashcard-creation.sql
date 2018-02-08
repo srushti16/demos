@@ -43,6 +43,24 @@ CREATE TABLE flashcard
     answer VARCHAR2(500) NOT NULL
 );
 
+CREATE TABLE cardset
+(
+    set_id NUMBER PRIMARY KEY,
+    title VARCHAR2(20) NOT NULL,
+    subject VARCHAR2(50)
+);
+
+CREATE TABLE flashcard_cardset
+(
+    set_id NUMBER,
+    flashcard_id NUMBER,
+    CONSTRAINT pk_flashcard_cardset PRIMARY KEY (set_id, flashcard_id),
+    FOREIGN KEY (set_id) REFERENCES cardset (set_id),
+    FOREIGN KEY (flashcard_id) REFERENCES flashcard (flashcard_id)
+);
+
+
+
 
 /*******************************************************************************
    Create Primary Key Unique Indexes
