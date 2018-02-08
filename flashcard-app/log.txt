@@ -1,0 +1,4 @@
+2018-02-08 16:53:53 TRACE FlashcardDAOJDBC:25 - method called to insert new flashcard
+2018-02-08 16:53:53 TRACE FlashcardDAOJDBC:26 - Attempting to get connection to db
+2018-02-08 16:53:54 TRACE FlashcardDAOJDBC:29 - connection established with db, creating prepared statement
+2018-02-08 16:53:55 DEBUG FlashcardDAOJDBC:35 - query inserted 1 rows into the db
