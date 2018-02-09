@@ -1,4 +1,4 @@
-SELECT * FROM flashcard;
+
 
 SELECT COUNT(flashcard_id) FROM flashcard 
     INNER JOIN flashcard_cardset USING(flashcard_id) WHERE set_id = 1;
@@ -130,3 +130,5 @@ BEGIN
     END LOOP;
 END;
 /
+
+SELECT * FROM flashcard;
