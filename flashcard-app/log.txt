@@ -84,3 +84,4 @@
 2018-02-09 16:18:34 TRACE FlashcardDAOJDBC:152 - retreived all flashcards in set and returning the list
 2018-02-09 16:18:55 TRACE SetDAOJDBC:22 - method called to delete set with id1
 2018-02-09 16:18:56 DEBUG SetDAOJDBC:27 - deleted set with id1
+2018-02-09 16:26:14 DEBUG SetDAOJDBC:43 - deleted set with id1

@@ -3,6 +3,7 @@ package com.revature.dao;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Types;
 
 import org.apache.log4j.Logger;
 
@@ -14,7 +15,8 @@ public class SetDAOJDBC implements SetDAO {
 
 	public static void main(String[] args) {
 		SetDAO sd = new SetDAOJDBC();
-		sd.delete(1);
+//		sd.delete(1);
+		System.out.println(sd.getCardsInSet(1));
 	}
 
 	@Override
@@ -29,6 +31,22 @@ public class SetDAOJDBC implements SetDAO {
 			log.debug("failed to delete set with id" + setId);
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public int getCardsInSet(int setId) {
+		try (Connection conn = connUtil.getConnection()) {
+			CallableStatement cs = conn.prepareCall("{? = call get_number_cards_in_set(?)}");
+			cs.registerOutParameter(1, Types.INTEGER);
+			cs.setInt(2, setId);
+			cs.execute();
+			log.debug("deleted set with id" + setId);
+			return cs.getInt(1);
+		} catch (SQLException e) {
+			log.debug("failed to delete set with id" + setId);
+			e.printStackTrace();
+		}
+		return 0;
 	}
 
 }
