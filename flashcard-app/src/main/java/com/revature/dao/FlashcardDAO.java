@@ -8,6 +8,8 @@ public interface FlashcardDAO {
 	// C
 	int save(Flashcard fc);
 
+	void save(Flashcard fc, int setId);
+
 	// U
 	void update(Flashcard fc);
 

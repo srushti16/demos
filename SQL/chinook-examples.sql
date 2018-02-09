@@ -79,3 +79,5 @@ SELECT * FROM track WHERE trackid BETWEEN 51 AND 55;
 SELECT * FROM track WHERE trackid < 25
 INTERSECT
 SELECT * FROM track WHERE MOD(trackid, 5) = 0;
+
+SELECT * FROM employee WHERE birthdate < TO_DATE('1970-01-01', 'YYYY-MM-DD');

@@ -40,3 +40,47 @@
 2018-02-09 10:41:07 TRACE FlashcardDAOJDBC:38 - Attempting to get connection to db
 2018-02-09 10:41:07 TRACE FlashcardDAOJDBC:41 - connection established with db, creating prepared statement
 2018-02-09 10:41:07 DEBUG FlashcardDAOJDBC:48 - query inserted 1 rows into the db
+2018-02-09 10:47:48 TRACE FlashcardDAOJDBC:37 - method called to insert new flashcard
+2018-02-09 10:47:48 TRACE FlashcardDAOJDBC:38 - Attempting to get connection to db
+2018-02-09 10:47:49 TRACE FlashcardDAOJDBC:41 - connection established with db, creating prepared statement
+2018-02-09 10:47:49 DEBUG FlashcardDAOJDBC:48 - query inserted 1 rows into the db
+2018-02-09 10:47:49 WARN  FlashcardDAOJDBC:56 - failed to insert new flashcard
+2018-02-09 10:48:09 TRACE FlashcardDAOJDBC:37 - method called to insert new flashcard
+2018-02-09 10:48:09 TRACE FlashcardDAOJDBC:38 - Attempting to get connection to db
+2018-02-09 10:48:09 TRACE FlashcardDAOJDBC:41 - connection established with db, creating prepared statement
+2018-02-09 10:48:10 DEBUG FlashcardDAOJDBC:48 - query inserted 1 rows into the db
+2018-02-09 10:48:10 WARN  FlashcardDAOJDBC:56 - failed to insert new flashcard
+2018-02-09 10:48:26 TRACE FlashcardDAOJDBC:37 - method called to insert new flashcard
+2018-02-09 10:48:26 TRACE FlashcardDAOJDBC:38 - Attempting to get connection to db
+2018-02-09 10:48:26 TRACE FlashcardDAOJDBC:41 - connection established with db, creating prepared statement
+2018-02-09 10:48:26 DEBUG FlashcardDAOJDBC:48 - query inserted 1 rows into the db
+2018-02-09 14:34:14 TRACE FlashcardDAOJDBC:37 - method called to insert new flashcard
+2018-02-09 14:34:14 TRACE FlashcardDAOJDBC:38 - Attempting to get connection to db
+2018-02-09 14:34:15 TRACE FlashcardDAOJDBC:41 - connection established with db, creating prepared statement
+2018-02-09 14:34:15 DEBUG FlashcardDAOJDBC:48 - query inserted 1 rows into the db
+2018-02-09 14:34:15 TRACE FlashcardDAOJDBC:89 - method called to select flashcard with id 2
+2018-02-09 14:34:15 TRACE FlashcardDAOJDBC:90 - Attempting to get connection to db
+2018-02-09 14:47:19 TRACE FlashcardDAOJDBC:66 - method called to insert new flashcard into set with id1
+2018-02-09 14:47:19 TRACE FlashcardDAOJDBC:67 - Attempting to get connection to db
+2018-02-09 14:47:20 TRACE FlashcardDAOJDBC:77 - flashcard created with id17
+2018-02-09 14:47:20 TRACE FlashcardDAOJDBC:136 - method called to select flashcard with set id 1
+2018-02-09 14:47:20 TRACE FlashcardDAOJDBC:137 - Attempting to get connection to db
+2018-02-09 14:47:20 TRACE FlashcardDAOJDBC:150 - retreived all flashcards in set and returning the list
+2018-02-09 15:29:06 TRACE FlashcardDAOJDBC:139 - method called to select flashcard with set id 1
+2018-02-09 15:29:06 TRACE FlashcardDAOJDBC:140 - Attempting to get connection to db
+2018-02-09 15:29:07 TRACE FlashcardDAOJDBC:152 - retreived all flashcards in set and returning the list
+2018-02-09 15:48:32 TRACE SetDAOJDBC:22 - method called to delete set with id1
+2018-02-09 15:48:33 DEBUG SetDAOJDBC:29 - failed to delete set with id1
+2018-02-09 15:50:27 TRACE SetDAOJDBC:22 - method called to delete set with id1
+2018-02-09 15:50:27 DEBUG SetDAOJDBC:29 - failed to delete set with id1
+2018-02-09 15:59:21 TRACE SetDAOJDBC:22 - method called to delete set with id1
+2018-02-09 15:59:22 DEBUG SetDAOJDBC:27 - deleted set with id1
+2018-02-09 16:05:16 TRACE SetDAOJDBC:22 - method called to delete set with id1
+2018-02-09 16:05:17 DEBUG SetDAOJDBC:27 - deleted set with id1
+2018-02-09 16:05:59 TRACE SetDAOJDBC:22 - method called to delete set with id2
+2018-02-09 16:05:59 DEBUG SetDAOJDBC:27 - deleted set with id2
+2018-02-09 16:18:34 TRACE FlashcardDAOJDBC:139 - method called to select flashcard with set id 1
+2018-02-09 16:18:34 TRACE FlashcardDAOJDBC:140 - Attempting to get connection to db
+2018-02-09 16:18:34 TRACE FlashcardDAOJDBC:152 - retreived all flashcards in set and returning the list
+2018-02-09 16:18:55 TRACE SetDAOJDBC:22 - method called to delete set with id1
+2018-02-09 16:18:56 DEBUG SetDAOJDBC:27 - deleted set with id1

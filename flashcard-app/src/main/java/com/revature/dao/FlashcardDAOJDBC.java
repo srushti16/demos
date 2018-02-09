@@ -1,35 +1,40 @@
 package com.revature.dao;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 
 import com.revature.beans.Flashcard;
+import com.revature.util.ConnectionUtil;
 
 public class FlashcardDAOJDBC implements FlashcardDAO {
 	private Logger log = Logger.getRootLogger();
+	private ConnectionUtil connUtil = ConnectionUtil.getConnectionUtil();
 
 	public static void main(String[] args) {
 		FlashcardDAO flashDao = new FlashcardDAOJDBC();
 
-		Flashcard fc = new Flashcard(0, "new flashcard", "new answer");
-		System.out.println(flashDao.save(fc));
+		// Flashcard fc = new Flashcard(0, "new flashcard for set 1", "new answer for
+		// flashcard in set 1");
+		// flashDao.save(fc, 1);
 
 		// Flashcard fc = new Flashcard(6, "hacked", "hacked' --");
 		// flashDao.update(fc);
 
 		// System.out.println(flashDao.get(2));
 
-		// flashDao.findBySetId(1).stream().forEach(ele -> {
-		// System.out.println(ele);
-		// });
+		flashDao.findBySetId(1).stream().forEach(ele -> {
+			System.out.println(ele);
+		});
 	}
 
 	@Override
@@ -57,6 +62,27 @@ public class FlashcardDAOJDBC implements FlashcardDAO {
 		}
 
 		return 0;
+	}
+
+	@Override
+	public void save(Flashcard fc, int setId) {
+		log.trace("method called to insert new flashcard into set with id" + setId);
+		log.trace("Attempting to get connection to db");
+		try (Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "flashcard",
+				"p4ssw0rd")) {
+			CallableStatement cs = conn.prepareCall("call create_flashcard_for_set(?,?,?,?)");
+			cs.setString(1, fc.getQuestion());
+			cs.setString(2, fc.getAnswer());
+			cs.setInt(3, setId);
+			cs.registerOutParameter(4, Types.INTEGER);
+			cs.execute();
+
+			log.trace("flashcard created with id" + cs.getInt(4));
+			fc.setId(cs.getInt(4));
+
+		} catch (SQLException e) {
+			log.warn("failed to insert new flashcard");
+		}
 	}
 
 	/**
@@ -112,8 +138,7 @@ public class FlashcardDAOJDBC implements FlashcardDAO {
 	public List<Flashcard> findBySetId(int id) {
 		log.trace("method called to select flashcard with set id " + id);
 		log.trace("Attempting to get connection to db");
-		try (Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "flashcard",
-				"p4ssw0rd")) {
+		try (Connection conn = connUtil.getConnection()) {
 			List<Flashcard> cardsInSet = new ArrayList<>();
 			PreparedStatement ps = conn.prepareStatement(
 					"SELECT * FROM flashcard INNER JOIN flashcard_cardset USING(flashcard_id) WHERE set_id = ?");
