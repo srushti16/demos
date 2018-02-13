@@ -1,0 +1,15 @@
+.cool-object {
+  color: purple;
+  box-shadow: 5px 5px 5px 10px blue;
+  margin: 1em;
+  border: 5em red dashed;
+  padding: 0.5em;
+  background-color: #33ff33;
+  border-radius: 20pt;
+}
+
+.cool-object:hover {
+  color: turquoise;
+  background-color: slategrey;
+  cursor: crosshair;
+}
