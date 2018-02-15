@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <form>
+    <label for="new-id">Id</label>
+    <input type="number" name="new-id" id="new-id">
+    <label for="new-question">Question</label>
+    <input type="text" name="new-question" id="new-question" placeholder="new question">
+    <br>
+    <label for="new-answer">Answer</label>
+    <textarea name="new-answer" id="new-answer" cols="30" rows="10"></textarea>
+    <button class="btn btn-primary" id="new-flashcard-button" onclick="event.preventDefault(); addCard()">Add</button>
+    <link rel="stylesheet" href="flashcards.css">
+  </form>
+
+  <div id="card-container">
+    <div class="card" id="flashcard-1">
+      <div class="card-header">
+        Question
+      </div>
+      <div class="card-body">
+        <p class="card-text hidden">This is the answer to the question</p>
+        <button class="btn btn-primary" onclick="toggle(1)">Toggle Answer</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- bootstrap js requirements -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- My JS files -->
+  <script src="flashcard.js"></script>
+</body>
+
+</html>
