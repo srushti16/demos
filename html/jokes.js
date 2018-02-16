@@ -21,7 +21,7 @@ function getJoke(category) {
     }
   }
   xhttp.open('GET', url);
-  xhttp.send();
+  xhttp.send(); // for other types, xhttp.send(body);, xhttp.send(JSON.stringify(crediantial))
 }
 
 
