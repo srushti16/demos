@@ -9,11 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.catalina.servlets.DefaultServlet;
 import org.apache.log4j.Logger;
 
-import com.revature.controller.SwordController;
+import com.revature.controllers.FlashcardController;
+import com.revature.controllers.SwordController;
 
 public class DispatcherServlet extends DefaultServlet {
 	private Logger log = Logger.getRootLogger();
 	private SwordController sc = new SwordController();
+	private FlashcardController fc = new FlashcardController();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -26,6 +28,8 @@ public class DispatcherServlet extends DefaultServlet {
 		} else {
 			if (url.startsWith("/swords")) {
 				sc.doGet(request, response);
+			} else if (url.startsWith("/flashcards")) {
+				fc.doGet(request, response);
 			}
 		}
 	}
