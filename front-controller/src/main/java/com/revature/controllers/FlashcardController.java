@@ -30,9 +30,9 @@ public class FlashcardController implements HttpController {
 			List<Flashcard> cards = fs.findBySetId(id);
 			respUtil.writeObjectToResponse(cards, resp);
 		} else if (url.startsWith(BY_ID_URL)) {
-			// int id = Integer.parseInt(url.substring(BY_ID_URL.length()));
-			// Sword sw = ss.findById(id);
-			// ru.writeObjectToResponse(sw, resp);
+			int id = Integer.parseInt(url.substring(BY_ID_URL.length()));
+			Flashcard card = fs.findById(id);
+			respUtil.writeObjectToResponse(card, resp);
 		}
 
 	}

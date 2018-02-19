@@ -13,4 +13,8 @@ public class FlashcardService {
 		return cardDao.findBySetId(id);
 	}
 
+	public Flashcard findById(int id) {
+		return cardDao.get(id);
+	}
+
 }

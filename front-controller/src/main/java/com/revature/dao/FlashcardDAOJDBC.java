@@ -24,8 +24,7 @@ public class FlashcardDAOJDBC implements FlashcardDAO {
 	public int save(Flashcard fc) {
 		log.trace("method called to insert new flashcard");
 		log.trace("Attempting to get connection to db");
-		try (Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "flashcard",
-				"p4ssw0rd")) {
+		try (Connection conn = connUtil.getConnection()) {
 			log.trace("connection established with db, creating prepared statement");
 			PreparedStatement ps = conn.prepareStatement("INSERT INTO flashcard (question, answer) VALUES (?,?)",
 					new String[] { "flashcard_id" });
@@ -75,8 +74,7 @@ public class FlashcardDAOJDBC implements FlashcardDAO {
 	public void update(Flashcard fc) {
 		log.trace("method called to update new flashcard");
 		log.trace("Attempting to get connection to db");
-		try (Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "flashcard",
-				"p4ssw0rd")) {
+		try (Connection conn = connUtil.getConnection()) {
 			Statement s = conn.createStatement();
 			int numRowsUpdated = s.executeUpdate("UPDATE flashcard SET question = '" + fc.getQuestion() + "', answer='"
 					+ fc.getAnswer() + "' WHERE flashcard_id=" + fc.getId());
@@ -97,8 +95,7 @@ public class FlashcardDAOJDBC implements FlashcardDAO {
 	public Flashcard get(int id) {
 		log.trace("method called to select flashcard with id " + id);
 		log.trace("Attempting to get connection to db");
-		try (Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "flashcard",
-				"p4ssw0rd")) {
+		try (Connection conn = connUtil.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement("SELECT * FROM flashcard WHERE flashcard_id = ?");
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
