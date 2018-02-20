@@ -26,7 +26,7 @@ public class DispatcherServlet extends DefaultServlet {
 		String url = request.getPathInfo();
 		log.trace("Get request made with path " + url);
 		if (url.startsWith("/static/")) {
-			super.doGet(request, response);
+			super.doGet(request, response); // all for default handling for static content
 			return;
 		} else {
 			if (url.startsWith("/swords")) {

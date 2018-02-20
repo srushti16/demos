@@ -7,7 +7,7 @@ public class User {
 	private int id;
 	private String username;
 
-	@JsonProperty(access = Access.READ_ONLY)
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private String password;
 
 	public User() {
