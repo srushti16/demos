@@ -43,11 +43,20 @@ CREATE TABLE flashcard
     answer VARCHAR2(500) NOT NULL
 );
 
+CREATE TABLE app_user
+(
+    user_id NUMBER PRIMARY KEY,
+    username VARCHAR2(25) NOT NULL UNIQUE,
+    password VARCHAR2(25) NOT NULL
+
+);
+
 CREATE TABLE cardset
 (
     set_id NUMBER PRIMARY KEY,
     title VARCHAR2(20) NOT NULL,
-    subject VARCHAR2(50)
+    subject VARCHAR2(50), 
+    user_id NUMBER REFERENCES app_user.user_id
 );
 
 CREATE TABLE flashcard_cardset

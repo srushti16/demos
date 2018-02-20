@@ -22,6 +22,7 @@ public class DispatcherServlet extends DefaultServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
+		log.trace(request.getParameter("username"));
 		String url = request.getPathInfo();
 		log.trace("Get request made with path " + url);
 		if (url.startsWith("/static/")) {
@@ -34,6 +35,9 @@ public class DispatcherServlet extends DefaultServlet {
 				fc.doGet(request, response);
 			} else if (url.startsWith("/users")) {
 				userController.doGet(request, response);
+			} else {
+				log.trace("url not mapped");
+				request.getRequestDispatcher("static/index.html").forward(request, response);
 			}
 		}
 	}
@@ -49,6 +53,9 @@ public class DispatcherServlet extends DefaultServlet {
 			fc.doPost(request, response);
 		} else if (url.startsWith("/users")) {
 			userController.doPost(request, response);
+		} else {
+			log.trace("url not mapped");
+			request.getRequestDispatcher("static/index.html").forward(request, response);
 		}
 	}
 }

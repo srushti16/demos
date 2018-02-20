@@ -12,6 +12,11 @@
   	<servlet-class>com.revature.servlets.ForwardReceiver</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<servlet-class>com.revature.servlets.LoginServlet</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>Sender</servlet-name>
   	<url-pattern>/send</url-pattern>
@@ -20,6 +25,11 @@
   <servlet-mapping>
   	<servlet-name>Receiver</servlet-name>
   	<url-pattern>/receiver</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/login</url-pattern>
   </servlet-mapping>
   
 </web-app>
