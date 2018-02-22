@@ -11,6 +11,7 @@ import { Hero } from '../../beans/hero';
 export class HeroesComponent {
   heroes: Array<Hero> = [];
   newHero = new Hero();
+  powerFilter = 0;
 
   constructor() {
     this.heroes.push(new Hero(1, 'Spider Man',

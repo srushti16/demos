@@ -4,6 +4,10 @@
   <input type="number" name="hero-power" [(ngModel)]="newHero.power" placeholder="power">
   <button class="btn btn-primary" type="submit">Submit</button>
 </form>
-<div *ngFor="let h of heroes">
+<br>
+<label for="power-filter"></label>
+<input type="number" name="power-filter" [(ngModel)]="powerFilter">
+<br>
+<div *ngFor="let h of (heroes | heroPower:powerFilter)">
   <app-hero [hero]="h"></app-hero>
 </div>

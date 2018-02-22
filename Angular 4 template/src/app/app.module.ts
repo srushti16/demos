@@ -15,6 +15,8 @@ import { SecondComponent } from './components/second/second.component';
 import { ClickerComponent } from './components/clicker/clicker.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
+import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
+import { HeroPowerPipe } from './pipes/hero-power.pipe';
 
 @NgModule({
   imports: [
@@ -31,7 +33,9 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     SecondComponent,
     ClickerComponent,
     HeroComponent,
-    HeroesComponent
+    HeroesComponent,
+    PipeDemoComponent,
+    HeroPowerPipe
   ],
   providers: [
 
