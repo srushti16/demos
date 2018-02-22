@@ -17,6 +17,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { HeroPowerPipe } from './pipes/hero-power.pipe';
+import { HeroService } from './services/hero.service';
 
 @NgModule({
   imports: [
@@ -38,7 +39,7 @@ import { HeroPowerPipe } from './pipes/hero-power.pipe';
     HeroPowerPipe
   ],
   providers: [
-
+    HeroService
   ],
   bootstrap: [AppComponent]
 })
