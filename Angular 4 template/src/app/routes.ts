@@ -14,8 +14,22 @@ import { Child6Component } from './components/parent/child6/child6.component';
 import { ParamRouteComponent } from './components/param-route/param-route.component';
 import { ParamParentComponent } from './components/param-parent/param-parent.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
+import { LoginComponent } from './components/login/login.component';
+import { UsersComponent } from './components/users/users.component';
+import { LoggedInGuard } from './guards/logged-in.guard';
 
 export const appRoutes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'users',
+    component: UsersComponent,
+    canActivate: [
+      LoggedInGuard
+    ]
+  },
   {
     path: 'first',
     component: FirstComponent

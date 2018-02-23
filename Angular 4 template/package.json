@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --env=prod",
+    "build": "ng build -prod --env=prod --base-href=/front-controller/page --deploy-url=/front-controller/static/dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "^4.4.6",
     "@angular/router": "^4.4.6",
     "@ng-bootstrap/ng-bootstrap": "1.0.0-beta.3",
-    "@uirouter/angular": "^1.0.0-beta.7",
+    "angular2-cookie": "^1.2.6",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.1",
     "typescript": "^2.2.1",

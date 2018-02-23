@@ -28,6 +28,11 @@ import { Child6Component } from './components/parent/child6/child6.component';
 import { ParamRouteComponent } from './components/param-route/param-route.component';
 import { ParamParentComponent } from './components/param-parent/param-parent.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
+import { LoginComponent } from './components/login/login.component';
+import { UsersComponent } from './components/users/users.component';
+import { LoggedInGuard } from './guards/logged-in.guard';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
+
 
 @NgModule({
   imports: [
@@ -57,10 +62,14 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
     Child6Component,
     ParamRouteComponent,
     ParamParentComponent,
-    PokemonComponent
+    PokemonComponent,
+    LoginComponent,
+    UsersComponent
   ],
   providers: [
-    HeroService
+    HeroService,
+    LoggedInGuard,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
