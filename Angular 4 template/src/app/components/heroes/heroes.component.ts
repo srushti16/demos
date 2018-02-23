@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Hero } from '../../beans/hero';
 import { HeroService } from '../../services/hero.service';
 
@@ -9,7 +9,7 @@ import { HeroService } from '../../services/hero.service';
     './heroes.component.css'
   ]
 })
-export class HeroesComponent implements OnInit{
+export class HeroesComponent implements OnInit {
   heroes: Array<Hero>;
   newHero = new Hero();
   powerFilter = 0;
@@ -24,7 +24,9 @@ export class HeroesComponent implements OnInit{
 
   addHero(hero: Hero) {
     console.log('adding hero');
+    console.log(this.heroes);
     this.heroes.unshift(hero);
+    this.heroes = this.heroes.splice(0);
     this.newHero = new Hero();
   }
 }

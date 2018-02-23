@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Hero } from '../beans/hero';
 
 @Pipe({
-  name: 'heroPower'
+  name: 'heroPower',
 })
 export class HeroPowerPipe implements PipeTransform {
 

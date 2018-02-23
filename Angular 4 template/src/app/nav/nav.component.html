@@ -16,11 +16,15 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
       <li ngbDropdown class="d-inline-block">
-        <a class="nav-link dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</a>
+        <a class="nav-link dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>Examples</a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button class="dropdown-item">Action - 1</button>
-          <button class="dropdown-item">Another Action</button>
-          <button class="dropdown-item">Something else is here</button>
+          <button class="dropdown-item" routerLink="/first">First</button>
+          <button class="dropdown-item" routerLink="/second">Second</button>
+          <button class="dropdown-item" routerLink="/heroes">Heroes</button>
+          <button class="dropdown-item" routerLink="/pipe">Pipes</button>
+          <button class="dropdown-item" routerLink="/clicker">Clicker</button>
+          <button class="dropdown-item" routerLink="/parent">Nested Routes</button>
+          <button class="dropdown-item" routerLink="/pokemon">Pokemon</button>
         </div>
       </li>
     </ul>
