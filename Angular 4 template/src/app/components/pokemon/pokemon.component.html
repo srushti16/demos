@@ -1,1 +1,5 @@
-name: {{pokemon.name}}
+<p>
+  name: {{pokemon?.name}}
+</p>
+
+<img *ngIf="pokemon" [src]="pokemon?.sprites.front_default">
