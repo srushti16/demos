@@ -28,6 +28,8 @@ public class DispatcherServlet extends DefaultServlet {
 		if (url.startsWith("/static/")) {
 			super.doGet(request, response); // all for default handling for static content
 			return;
+		} else if(url.equals("/page")) {
+			request.getRequestDispatcher("/static/dist/index.html").forward(request, response);
 		} else {
 			if (url.startsWith("/swords")) {
 				sc.doGet(request, response);

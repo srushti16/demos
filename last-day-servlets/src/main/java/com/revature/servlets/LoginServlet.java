@@ -1,6 +1,8 @@
 package com.revature.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,9 +21,37 @@ public class LoginServlet extends DefaultServlet {
 	private UserService userService = new UserService();
 
 	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		super.service(req, resp);
+		resp.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+		resp.addHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE, HEAD");
+		resp.addHeader("Access-Control-Allow-Headers",
+				"Origin, Methods, Credentials, X-Requested-With, Content-Type, Accept");
+		resp.addHeader("Access-Control-Allow-Credentials", "true");
+		resp.setContentType("application/json");
+	}
+
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		request.getRequestDispatcher("/static/login.html").forward(request, response);
+		if(request.getSession().getAttribute("user") == null) {
+			response.setStatus(403);
+			return;
+		}
+		List<User> users = new ArrayList<>();
+		users.add(new User(1, "blake", "pass"));
+		users.add(new User(1, "blake", "pass"));
+		users.add(new User(1, "blake", "pass"));
+		users.add(new User(1, "blake", "pass"));
+		users.add(new User(1, "blake", "pass"));
+		users.add(new User(1, "blake", "pass"));
+		users.add(new User(1, "blake", "pass"));
+		users.add(new User(1, "blake", "pass"));
+		users.add(new User(1, "blake", "pass"));
+		
+		ObjectMapper om = new ObjectMapper();
+		String json = om.writeValueAsString(users);
+		response.getWriter().write(json);
 	}
 
 	@Override
@@ -45,6 +75,8 @@ public class LoginServlet extends DefaultServlet {
 		if (u != null) {
 			HttpSession sess = request.getSession();
 			sess.setAttribute("user", u);
+			String respJson = om.writeValueAsString(u);
+			response.getWriter().write(respJson);
 		} else {
 			response.setStatus(401);
 		}
