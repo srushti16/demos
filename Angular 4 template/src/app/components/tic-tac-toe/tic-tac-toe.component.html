@@ -1,0 +1,10 @@
+<h4 *ngIf="!isOver">Player {{playerTurn ? 'x' : 'o'}}'s turn</h4>
+<h4 *ngIf="isOver">{{message}}</h4>
+<div id="board">
+  <div *ngFor="let row of game; let r = index" class="flex-row">
+    <div [ngClass]="{disabled: col || isOver}" *ngFor="let col of row; let c = index" class="bordered" (click)="makeMove(r, c)">
+      {{col}}
+    </div>
+  </div>
+</div>
+<button class="btn btn-primary" *ngIf="isOver" (click)="reset()">Reset</button>

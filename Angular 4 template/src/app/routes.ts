@@ -17,11 +17,16 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { LoginComponent } from './components/login/login.component';
 import { UsersComponent } from './components/users/users.component';
 import { LoggedInGuard } from './guards/logged-in.guard';
+import { TicTacToeComponent } from './components/tic-tac-toe/tic-tac-toe.component';
 
 export const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'tic-tac',
+    component: TicTacToeComponent
   },
   {
     path: 'users',

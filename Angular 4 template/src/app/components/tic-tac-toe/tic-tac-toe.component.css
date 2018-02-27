@@ -1,0 +1,23 @@
+#board {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.bordered {
+  border: 1px solid black;
+  font-size: 4em;
+  width: 100%;
+  text-align: center;
+  min-height: 1em;
+}
+
+.bordered:hover {
+  cursor: pointer;
+}
+
+.disabled:hover {
+  cursor: not-allowed;
+}
